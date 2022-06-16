@@ -40,8 +40,6 @@ public class Handler implements RequestStreamHandler {
 
                         Try.run(() -> csvPrinter.printRecord(time, xAcceleration, yAcceleration, zAcceleration));
                     });
-
-            outputStream.write(csvPrinter.getOut().toString().getBytes());
         }
     }
 }
